@@ -201,7 +201,7 @@ msg
 
 input.value="";
 
-
+console.log("Sending slug:", slug);
 
 const response =
 await fetch(
