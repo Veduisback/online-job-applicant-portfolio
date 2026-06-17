@@ -24,18 +24,17 @@ process.env.FIREBASE_SERVICE_ACCOUNT
 );
 
 
+const { cert } = require("firebase-admin/app");
+
+
 admin.initializeApp({
 
-credential:
-admin.credential.cert(serviceAccount)
+credential: cert(serviceAccount)
 
 });
 
 
-const db =
-admin.firestore();
-
-
+const db = getFirestore();
 
 
 
