@@ -8,10 +8,25 @@ const admin = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
 
 
-const app = express();
+const cors = require("cors");
 
 
-app.use(cors());
+app.use(cors({
+
+    origin:[
+        "https://veduisback.github.io"
+    ],
+
+    methods:[
+        "GET",
+        "POST"
+    ],
+
+    allowedHeaders:[
+        "Content-Type"
+    ]
+
+}));
 
 app.use(express.json());
 
